@@ -1,22 +1,42 @@
 import React from 'react';
-import PricingOptions from './pricingOptions/PricingOptions';
+import PricingOption from './PricingOption/PricingOption';
 
 const Pricing = () => {
     const pricingOptions = [
-        {id: 1, name: 'Free', price: 0},
-        {id: 2, name: 'Regular', price: 9.99},
-        {id: 3, name: 'Premium', price: 19.99},
+        {id: 1, name: 'Free', price: 0, benefits: [
+            'Lifetime Free',
+            'Unlimited Deals',
+            'Localized Deals',
+            'Fantastic Deals',
+            'Crazy Deals'
+        ]},
+        {id: 2, name: 'Regular', price: 9.99, benefits: [
+            'Everything On Free',
+            'Unlimited Deals',
+            'Localized Deals',
+            'Fantastic Deals',
+            'Crazy Deals'
+        ]},
+        {id: 3, name: 'Premium', price: 19.99, benefits: [
+            'Everything On Regular',
+            'Unlimited Deals',
+            'Localized Deals',
+            'Fantastic Deals',
+            'Crazy Deals'
+        ]}
     ];
-    return (
-        <div className='bg-indigo-300 p-4 mt-8'>
-            <h1 className='text-6xl font-mono text-white'>Best Deals of the town</h1>
-            <p> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <div className='grid md:grid-cols-3 gap-5'>
+    return ( 
+
+        <div className='bg-indigo-300  py-4 mt-8'>
+            <h1 className='text-6xl text-white font-mono'>Best Deals of the Town</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, cumque fuga! Quas dolores ad, rem eligendi sint expedita commodi odio!</p>
+            <div className='grid mx-4 md:grid-cols-3 gap-5 mt-8 '>
                 {
-                    pricingOptions.map(option => <PricingOptions key={option.id} option={option}></PricingOptions>)
+                    pricingOptions.map(option => <PricingOption key={option.id} option={option}></PricingOption>)
                 }
             </div>
         </div>
+        
     );
 };
 
