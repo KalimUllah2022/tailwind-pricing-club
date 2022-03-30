@@ -16,7 +16,7 @@ const PricingOption = (props) => {
                     benefits.map(benefit => <Benefit benefit={benefit}></Benefit>)
                 }
             </div>
-            <button className='bg-green-500 w-full flex justify-center rounded py-2 mt-10'>Buy Now <ShoppingCartIcon className='w-5 h-5'></ShoppingCartIcon></button>
+            <button className='bg-green-700 font-bold text-xl hover:bg-green-800 duration-500 items-center text-white w-full flex justify-center rounded py-2 mt-10'>Buy Now <ShoppingCartIcon className='w-5 h-5 ml-2'></ShoppingCartIcon></button>
         </div>
     );
 };
